@@ -1,4 +1,5 @@
 {% macro get_external_build_plan(source_node) %}
+    {% dbt_utils.log_info('Calling get_external_build_plan()') %}
     {{ return(adapter_macro('dbt_external_tables.get_external_build_plan', source_node)) }}
 {% endmacro %}
 
