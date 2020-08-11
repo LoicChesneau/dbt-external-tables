@@ -113,7 +113,7 @@
 
         {% set loop_label = loop.index ~ ' of ' ~ loop.length %}
 
-        {% do dbt_utils.log_info(loop_label ~ ' START external source ' ~ node.schema ~ '.' ~ node.identifier) -%}
+        {% do dbt_utils.log_info(loop_label ~ ' START - external source ' ~ node.schema ~ '.' ~ node.identifier) -%}
 
         {% set run_queue = dbt_external_tables.get_external_build_plan(node) %}
 
